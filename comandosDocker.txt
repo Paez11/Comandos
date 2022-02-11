@@ -1,0 +1,10 @@
+--mount type=bind,src=/home/usuario/web.dst=usr/local/apache2/htdocs
+mkdir [nombre]
+md [nombre] ( los mismo que mk)
+docker run -dit --name [nombre] -p 80:80 --mount type=bind,src=/home/usuario/web.dst=usr/local/apache2/htdocs httpd
+C:\programData\docker\volume (almacenamiento predeterminado de los volumenes)
+docker volumen create [nombre del volumen]
+docker volumen ls
+docker run -dit --name [nombre] -p 8080:80 --mount type=volumen,src=[nombre del archivo], dst=/usr/local/apache2/htdocs httpd
+cd .\[nombre]
+C:\User\Victo\miweb:/directorio de destino
