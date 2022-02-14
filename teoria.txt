@@ -1,0 +1,29 @@
+Lenguaje SQL
+Lenguaje de consulta estructurado
+
+Esta basado en el modelo relacional que esta formado por tablas, y estas a su vez por columnas o campos.
+Es un lenguaje estandar de definición consultas manipulación y control de base de datos que se subdivide a su vez
+en tres (o cuatro según algunos autores) sublenguajes distintos. Que son:
+
+DDL o LDD (Data definition lenguaje)
+Este componente está formado por las instrucciones usadas para crear, borrar, modificar y renombrar los componentes de la 
+estructura de una base de datos, es decir, la parte estática. Permite crear tablas, vistas, relaciones, dominios, indices, 
+base de datos, etc. Además de modificarlas, borrarlas y renombrarlas. Está formado por las siguientes instrucciones:
+-Create: TipoObjeto NombreObjeto [definición];
+-Drop: TipoObjeto NombreObjeto [opciones];
+-Alter TipoObjeto NombreObjeto Modficación;
+-Rename TipoiÒbjeto NombreObjeto NombreNuevo;
+
+DML O LMD (data manipulation languaje)
+Este sublenguaje lo forman los comandos usados para realizar consultas modificaciones borrados o inserciones sobre los datos
+contenidos en las tablas, es la parte dinamica de la base de datos. Las instrucciones de este componente serán las 
+siguientes:
+-Select Campo/s|* form tabla/s [opciones];
+-Insert into tablas [(camp1,...)];
+		values('valor1',...);
+Delete from tabla [where conditions];
+Update tabla set campo=valor|expresion
+	[where condiciones];
+DCL o LCD (data control languaje)
+
+TCL oLCT (transition control languaje)

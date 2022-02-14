@@ -1,3 +1,16 @@
+docker run [-it] [--name nombre] (imagen)
+exit
+docker start (nombre del contenedor)
+docker exec [-it] (nombre del contenedor) bash [bin/bash]
+docker stop (nombre del contenedor)
+docker rm (nombre del contenedor)
+docker ps
+
+docker run [-dit] [--name nombre] [-p puerto] (imagen)
+docker cp (archivo.extension) (nombre contenedor):(ruta del archivo) --> /usr/apache2/htdocs/index.html
+									/var/www/html
+docker run --name -e MYSQL_ROOT_PASSWORD=(contraseña) -p (puerto) -d docker.io/library/mariadb
+
 --mount type=bind,src=/home/usuario/web.dst=usr/local/apache2/htdocs
 mkdir [nombre]
 md [nombre] ( los mismo que mk)
@@ -5,6 +18,6 @@ docker run -dit --name [nombre] -p 80:80 --mount type=bind,src=/home/usuario/web
 C:\programData\docker\volume (almacenamiento predeterminado de los volumenes)
 docker volumen create [nombre del volumen]
 docker volumen ls
-docker run -dit --name [nombre] -p 8080:80 --mount type=volumen,src=[nombre del archivo], dst=/usr/local/apache2/htdocs httpd
+docker run [-dit] [--name nombre] -p 8080:80 --mount type=volumen,src=[nombre del archivo], dst=/usr/local/apache2/htdocs httpd
 cd .\[nombre]
 C:\User\Victo\miweb:/directorio de destino
