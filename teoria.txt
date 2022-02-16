@@ -7,16 +7,17 @@ en tres (o cuatro según algunos autores) sublenguajes distintos. Que son:
 
 DDL o LDD (Data definition lenguaje)
 Este componente está formado por las instrucciones usadas para crear, borrar, modificar y renombrar los componentes de la 
-estructura de una base de datos, es decir, la parte estática. Permite crear tablas, vistas, relaciones, dominios, indices, 
-base de datos, etc. Además de modificarlas, borrarlas y renombrarlas. Está formado por las siguientes instrucciones:
+estructura de una base de datos, es decir, la parte estática. Permite crear tablas, vistas, relaciones, dominios, 
+indices, base de datos, etc. Además de modificarlas, borrarlas y renombrarlas. Está formado por las siguientes 
+instrucciones:
 -Create: TipoObjeto NombreObjeto [definición];
 -Drop: TipoObjeto NombreObjeto [opciones];
 -Alter TipoObjeto NombreObjeto Modficación;
 -Rename TipoiÒbjeto NombreObjeto NombreNuevo;
 
 DML O LMD (data manipulation languaje)
-Este sublenguaje lo forman los comandos usados para realizar consultas modificaciones borrados o inserciones sobre los datos
-contenidos en las tablas, es la parte dinamica de la base de datos. Las instrucciones de este componente serán las 
+Este sublenguaje lo forman los comandos usados para realizar consultas modificaciones borrados o inserciones sobre los 
+datos contenidos en las tablas, es la parte dinamica de la base de datos. Las instrucciones de este componente serán las 
 siguientes:
 -Select Campo/s|* form tabla/s [opciones];
 -Insert into tablas [(camp1,...)];
@@ -25,5 +26,28 @@ Delete from tabla [where conditions];
 Update tabla set campo=valor|expresion
 	[where condiciones];
 DCL o LCD (data control languaje)
+Está formado por los comandos usados por el administrador para dar y quitar privilegios realizar copias de seguridad, 
+gestión de usuarios, etc.
+Ejemplos:
+	-Grand privilegios on ambito to Usuario@host;
+	-Revoke Privilegios en ambito from Usuario@host;
+	-Show grants [for Usuarios@host];
 
-TCL oLCT (transition control languaje)
+TCL o LCT (transition control languaje)
+Algunos autores incluyen este 4 sublenguaje que abarcaría las instrucciones que premiten realizar y 
+gestionar transacciones.
+Ejemplos:
+	-SavePoint PuntoDeRetorno;
+	-RollBack [to PuntoDeRetorno];
+	-commit;
+	-Begin;
+	-Status transaction;
+	-set autocommit = 0|1;
+
+Tipos de datos:
+	Numéricos:
+		-Tinyint [(n)][unsigned][zerofill];
+		-Smartint
+		-Medinmint
+		-int
+		-Begint
