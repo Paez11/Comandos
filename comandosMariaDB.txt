@@ -106,3 +106,8 @@ update (nombre tabla) set (tupla) = '(nuevo nombre)' where (indicamos donde quer
 show databases [like 'patron']
 
 source (fichero de texto)      --> si creamos un fichero de texto con comandos dentro de la ruta donde tengamos mariadb ejecuta todos los comandos
+
+select * from inmuebles order by (nombre) sobre todo para fechas;
+
+select * from inmuebles where (nombre de la tupla)(simbolo)(lo que buscas) or (nombre de la tupla)(simbolo)(lo que buscas);
+

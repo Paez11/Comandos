@@ -13,7 +13,10 @@ instrucciones:
 -Create: TipoObjeto NombreObjeto [definición];
 -Drop: TipoObjeto NombreObjeto [opciones];
 -Alter TipoObjeto NombreObjeto Modficación;
--Rename TipoiÒbjeto NombreObjeto NombreNuevo;
+-Rename TipoObjeto NombreObjeto NombreNuevo;
+Todo los objetos en sql se crean con la instrucción create y dependiendo del tipo de objeto que se cree, tendrá más o menos
+posibilidades.
+-(instruccion) TipoObjeto [if exists] NombreDeObjeto [Opciones]
 
 DML O LMD (data manipulation languaje)
 Este sublenguaje lo forman los comandos usados para realizar consultas modificaciones borrados o inserciones sobre los 
@@ -51,3 +54,5 @@ Tipos de datos:
 		-Medinmint
 		-int
 		-Begint
+
+Base de Datos

@@ -17,3 +17,7 @@ git pull(para bajar los archivos)
 git clone(clonar repositorio)
 
 git revert(pone encima uno de los comandos)
+
+git -u origin main
+
+git clean -df

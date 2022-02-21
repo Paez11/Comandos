@@ -21,3 +21,18 @@ docker volumen ls
 docker run [-dit] [--name nombre] -p 8080:80 --mount type=volumen,src=[nombre del archivo], dst=/usr/local/apache2/htdocs httpd
 cd .\[nombre]
 C:\User\Victo\miweb:/directorio de destino
+
+Manipulación de redes:
+
+docker network
+docker inspect (nombre del contenedor)
+docker network ls
+
+docker network inspect (nombre de la red o el que viene por defecto)
+docker network create [-d (tipo de conexión NAT bridget) --subnet (ip) //ejemplo de una cualquiera {172.28.1.0/24} 
+--gateway (puerta de enlace) {172.28.1.1} (nombre que le quieras poner a la red) 
+docker run -d --network (nombre de la red) [--ip 172.28.1.10 -h database {-e MARIADB_ROOT_PASSWORD=ROOT}{-e MYSQL_DATABASE=
+(login) --name (nombre) mariadb}]
+
+docker run -d -e MYSQL_ROOT_PASSWORD=root -e PMA_HOST=(ip del host) --network (nombre de la red) (puerto)-->{8081:80}
+--name (nombre) phpmyadmin

@@ -10,3 +10,18 @@ ip route (ip de la que parte) (mascara) (cable)
 
 //ejemplo:
 ip route 192.168.2.0 255.255.255.0 fa0/1
+
+CLI:					//Para configurar un cable
+
+enable
+conf t
+interface (cable que quieras configurar)
+ip address (puerta de enlace para establecer) (mascara)
+no shutdown
+exit
+
+tabla de enroutamiento:
+
+enable 
+config t
+ip route (ip a la que va) (mascara) (cable por el que sale)
