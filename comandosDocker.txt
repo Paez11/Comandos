@@ -36,3 +36,6 @@ docker run -d --network (nombre de la red) [--ip 172.28.1.10 -h database {-e MAR
 
 docker run -d -e MYSQL_ROOT_PASSWORD=root -e PMA_HOST=(ip del host) --network (nombre de la red) (puerto)-->{8081:80}
 --name (nombre) phpmyadmin
+
+sudo docker services docker start
+chkconfig docker on
