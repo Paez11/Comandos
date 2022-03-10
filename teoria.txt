@@ -56,3 +56,20 @@ Tipos de datos:
 		-Begint
 
 Base de Datos
+
+
+
+Una vez creada una tabla podrá ser modificada su estructura sin tener que borrarla y volver a crear, y sobre todo
+sin tener que volver a introducir los valores que contenian. En concreto se puede hacer lo siguiente:
+-Añadir y borrar columnas
+-Se pueden modificar tipos de datos la precisión de una columna o su nombre
+-Añadir y borrar restricciones
+
+Alter table NombreTabla
+	add [(] Columnas/s tipo/s [after columna] [Restricciones] [Restricciones] [First] [)];
+	add primary key (campo/s);
+	add unique (campo);
+	add Foreign key (campo/s) reference tabla (campo/s)
+		[on delete....][on update....];
+	Drop 	Columna/s;
+	Drop primary key;
