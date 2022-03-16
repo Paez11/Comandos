@@ -22,12 +22,24 @@ DML O LMD (data manipulation languaje)
 Este sublenguaje lo forman los comandos usados para realizar consultas modificaciones borrados o inserciones sobre los 
 datos contenidos en las tablas, es la parte dinamica de la base de datos. Las instrucciones de este componente serán las 
 siguientes:
+
 -Select Campo/s|* form tabla/s [opciones];
 -Insert into tablas [(camp1,...)];
 		values('valor1',...);
 Delete from tabla [where conditions];
 Update tabla set campo=valor|expresion
 	[where condiciones];
+
+A este bloque pertenecen las instrucciones que permiten la manipulación del contenido de la base de datos, tenemos una
+instrucción para cada función que son:
+la inserción, consultas, borrado y modificación.
+Inserta nuevos registros en una tabla. Si coincide el valor al insertar de un campo clave o unique con alguno existente
+da error, a no ser que se ponga una clausura que lo evite.
+
+	-Insert [into] table|vista [(campo1,campo2,...)]
+		values (valor1, valor2,...) [,(valor1,valor2,...)...];
+		subconsulta;
+
 DCL o LCD (data control languaje)
 Está formado por los comandos usados por el administrador para dar y quitar privilegios realizar copias de seguridad, 
 gestión de usuarios, etc.
@@ -73,3 +85,7 @@ Alter table NombreTabla
 		[on delete....][on update....];
 	Drop 	Columna/s;
 	Drop primary key;
+	Drop foreign key (campo/s);
+	Modify [(] Campo/Existente [Nuevo]Tipo [Restricciones] [)];
+	Change NombreCampoViejo NombreCampoNuevo [Nuevo] tipo [Restricciones];
+	

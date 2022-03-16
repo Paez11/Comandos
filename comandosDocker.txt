@@ -37,5 +37,21 @@ docker run -d --network (nombre de la red) [--ip 172.28.1.10 -h database {-e MAR
 docker run -d -e MYSQL_ROOT_PASSWORD=root -e PMA_HOST=(ip del host) --network (nombre de la red) (puerto)-->{8081:80}
 --name (nombre) phpmyadmin
 
+docker run --name basededatos -e MYSQL_ROOT_PASSWORD=secret123 -e MYSQL_DATABASE=wordpress -
+-ip 172.17.0.100 -d mariadb 									//te conecta a la ip estaticamente de bridge
+
+
+docker run --name miwordpress -p 80:80 -d wordpress
+
+docker run --name basededatos --ip (ip) -e MYSQL_ROOT_PASSWORD=secret123 -e MYSQL_DATABASE=wordpress -
+-d --net (nombre de la red) -h (nombre del host) mariadb 
+
+docker run -d -p 80:80 --name (nombre del contenedor) --net (contenedor o red) wordpress
+
 sudo docker services docker start
 chkconfig docker on
+
+usuario: victor117
+contraseña: WQqI1ZIn4GRs*LBP0X
+
+V8B3u86cHFK.5F#
