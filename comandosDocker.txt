@@ -54,4 +54,22 @@ chkconfig docker on
 usuario: victor117
 contraseña: WQqI1ZIn4GRs*LBP0X
 
-V8B3u86cHFK.5F#
+base de datos: V8B3u86cHFK.5F#
+
+sudo crontab -e
+	y	--> escribir
+	Esc	--> dejar de escribir
+	:x	--> guardar el archivo
+
+
+docker-compose
+
+Hay que estar en la carpeta en la que se encuentre el archivo .yaml para ejecutar la libreria compose
+
+docker compose up -d los inicia
+
+docker compose down -v borra los contenedores
+
+docker compose exec accedemos al contenedor
+
+docker compose stop los para
